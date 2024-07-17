@@ -1,0 +1,20 @@
+$font: "Nunito", sans-serif;
+$header: "Sarabun", sans-serif;
+$blue: #579bb1;
+$white: #ffffff;
+$darkerWhite: #f0f0f0;
+
+
+@mixin flexCenter($direction, $content, $align) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-direction: $direction;
+}
+nav {
+    @include flexCenter(row,space-between,center );
+    ul {
+    @include flexCenter(row,space-between,center );
+    list-style: none;
+    }
+}
