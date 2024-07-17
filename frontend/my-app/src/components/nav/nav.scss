@@ -1,8 +1,27 @@
-$font: "Nunito", sans-serif;
-$header: "Sarabun", sans-serif;
-$blue: #579bb1;
+$font: "Signika", sans-serif;
+$header: "Poetsen One", sans-serif;
+$text-color: #78B3D5;
+$hover-color: #65A8CF;
 $white: #ffffff;
 $darkerWhite: #f0f0f0;
+
+*{
+  font-family: $font;
+}
+h1,h2,h3,h4 {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+a {
+  font-family: "Signika", sans-serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
 
 
 @mixin flexCenter($direction, $content, $align) {
@@ -11,10 +30,48 @@ $darkerWhite: #f0f0f0;
   align-items: $align;
   flex-direction: $direction;
 }
+
+
+
+
+.header {
+  position: sticky;
+  @include flexCenter(row,space-evenly,center );
+  width: 100vw;
+.logo{
+  height: 250px;
+  object-fit: contain;
+  width:  auto;
+}
+.user-row{
+  .icon{
+    height: 80px;
+    object-fit: contain;
+    width:  auto;
+  }
+}
+.search-bar{
+  outline: none;
+  border: solid 1px $text-color;
+  width: 25vw;
+  padding: 10px 15px 10px 15px;
+}
+}
 nav {
-    @include flexCenter(row,space-between,center );
+  position: absolute;
+  top: 20%;
+    @include flexCenter(row,center,center );
+    width: 100vw;
     ul {
+      width: 20vw;
     @include flexCenter(row,space-between,center );
     list-style: none;
+    a {
+      color: $text-color;
+      font-weight: bold;
     }
+    li {
+      margin: 0 10px;
+    }
+    } 
 }

@@ -8,7 +8,6 @@ import NoPage from "./pages/noPage";
 function App() {
   return (
     <div className="App">
-    <header className='App-header'>
       <Router>
         <div>
           <Navbar/>
@@ -20,7 +19,6 @@ function App() {
          </Routes>
        </div>
      </Router>
-     </header>
   </div>
     );
 }
