@@ -1,0 +1,127 @@
+$font: "Signika", sans-serif;
+$header: "Poetsen One", sans-serif;
+$text-color: #78B3D5;
+$hover-color: #65A8CF;
+$white: #ffffff;
+$darkerWhite: #f0f0f0;
+
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    justify-content: $content;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+
+  h1{
+    text-align: center;
+    margin-bottom: 40px;
+    color: $hover-color;
+}
+
+.filter-buttons{
+     @include flexCenter(row,center , center );
+     margin: 40px 0;
+     button {
+        border: solid .5px #78B3D5;
+        background-color: transparent;
+        color: $text-color;
+        width: 150px;
+        height: 30px;
+        font-size: 1rem;
+        transition: all .5s;
+        cursor: pointer;
+        &:hover, &:focus{
+            background-color: #65a8cf;
+            color: $white;
+        }
+     }
+}
+
+  .product-container {
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 30px;
+
+    .product{
+    margin-bottom: 10px;
+    padding: 20px 10px;
+    box-shadow: 2px 5px 5px 3px rgba(101, 168, 207, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    background-color: aliceblue;
+
+    &:hover{
+        transform: translateY(-10px);
+    }
+    }
+
+    .image {
+     max-width: 100%;
+    height: auto;
+    }
+
+    .brand-icon{
+        @include flexCenter(row,space-between, center);
+        h2 {
+            font-size: 1.3rem;
+        }
+        .icon {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    .product-price {
+        font-size: 1.3rem;
+        color: #65A8CF;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 1.1rem;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        background-color: #65A8CF;
+        color: white;
+        cursor: pointer;
+        transition: all .3s ;
+        &:hover {
+            background-color: #89b8d3 ;
+    
+            
+        }
+    }    
+}
+
+.product-detail {
+    @include flexCenter(row,space-evenly,center);
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    .detail-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+      button {
+        font-size: 1.1rem;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        background-color: #65A8CF;
+        color: white;
+        cursor: pointer;
+        transition: all .3s ;
+        &:hover {
+            background-color: #89b8d3 ;
+    
+            
+        }
+    }  
+}

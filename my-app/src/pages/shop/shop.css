@@ -1,0 +1,114 @@
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #65A8CF;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 40px 0;
+}
+.filter-buttons button {
+  border: solid 0.5px #78B3D5;
+  background-color: transparent;
+  color: #78B3D5;
+  width: 150px;
+  height: 30px;
+  font-size: 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.filter-buttons button:hover, .filter-buttons button:focus {
+  background-color: #65a8cf;
+  color: #ffffff;
+}
+
+.product-container {
+  width: 80%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0 auto;
+  gap: 30px;
+}
+.product-container .product {
+  margin-bottom: 10px;
+  padding: 20px 10px;
+  box-shadow: 2px 5px 5px 3px rgba(101, 168, 207, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  background-color: aliceblue;
+}
+.product-container .product:hover {
+  transform: translateY(-10px);
+}
+.product-container .image {
+  max-width: 100%;
+  height: auto;
+}
+.product-container .brand-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.product-container .brand-icon h2 {
+  font-size: 1.3rem;
+}
+.product-container .brand-icon .icon {
+  height: 20px;
+  width: 20px;
+}
+.product-container .product-price {
+  font-size: 1.3rem;
+  color: #65A8CF;
+}
+.product-container .description {
+  font-size: 1rem;
+}
+.product-container button {
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #65A8CF;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.product-container button:hover {
+  background-color: #89b8d3;
+}
+
+.product-detail {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+.product-detail .detail-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.product-detail button {
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #65A8CF;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.product-detail button:hover {
+  background-color: #89b8d3;
+}/*# sourceMappingURL=shop.css.map */

@@ -1,0 +1,103 @@
+$font: "Signika", sans-serif;
+$header: "Poetsen One", sans-serif;
+$text-color: #78B3D5;
+$hover-color: #65A8CF;
+$white: #ffffff;
+$darkerWhite: #f0f0f0;
+
+* {
+  font-family: $font;
+}
+
+h1, h2, h3, h4 {
+  font-family: $header;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  font-family: $font;
+  font-style: normal;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+@mixin flexCenter($direction, $content, $align) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+.header {
+  position: sticky;
+  @include flexCenter(row, space-evenly, center);
+  width: 100vw;
+  
+  .logo {
+    height: 250px;
+    object-fit: contain;
+    width: auto;
+  }
+  
+  nav {
+    @include flexCenter(row, center, center);
+    
+    ul {
+      width: 20vw;
+      @include flexCenter(row, space-between, center);
+      list-style: none;
+      
+      a {
+        color: $text-color;
+      }
+      
+      li {
+        margin: 0 10px;
+      }
+    }
+  }
+  
+  .user-row {
+    .icon {
+      height: 80px;
+      object-fit: contain;
+      width: auto;
+    }
+  }
+  
+  .search-bar {
+    outline: none;
+    border: solid 1px $text-color;
+    width: 25vw;
+    padding: 10px 15px 10px 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    @include flexCenter(column, center, center);
+
+    nav {
+      margin-top: 20px;
+      ul {
+        width: 100%;
+        @include flexCenter(column, center, center);
+        
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+    
+    .user-row {
+      margin-top: 20px;
+      @include flexCenter(row, space-evenly, center);
+      width: 100%;
+      
+      .icon {
+        height: 50px;
+      }
+    }
+  }
+}
