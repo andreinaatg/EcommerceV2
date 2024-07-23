@@ -23,7 +23,7 @@ connection.connect((err) => {
 });
 
 // Serve static files from the 'build' directory
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Serve images from the 'src/images' directory under '/images' route
 app.use('/products', express.static(path.join(__dirname, 'src', 'products')));
