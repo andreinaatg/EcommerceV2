@@ -30,6 +30,8 @@ function Shop() {
           <button onClick={() => setFilter('cleanser')}>Cleanser</button>
           <button onClick={() => setFilter('cream')}>Creams</button>
           <button onClick={() => setFilter('toner')}>Toners</button>
+          <button onClick={() => setFilter('serum')}>serum</button>
+
         </div>
         <div className="product-container">
           {products.map((product, i) => (
@@ -55,7 +57,6 @@ function Shop() {
         <img src={product.img} alt={product.name} className="detail-image" />
         <div className="details"> 
         <h2>{product.name}</h2>
-        <p>Brand: {product.brand}</p>
         <p>Price: ${product.price}</p>
         <p>Description: {product.description}</p>
         <button onClick={() => setSelectedProduct(null)}>Back to Products</button>

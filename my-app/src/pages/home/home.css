@@ -38,7 +38,7 @@ p {
   transition: background-color 0.3s;
 }
 .banner-info .shop-btn:hover {
-  background-color: #65A8CF;
+  background-color: rgba(101, 168, 207, 0.7333333333);
   color: white;
 }
 .banner-info .hideOnDesktop {

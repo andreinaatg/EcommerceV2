@@ -1,3 +1,10 @@
+.swiper {
+  margin-bottom: 50px;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+  color: #65A8CF;
+}
+
 .bestSeller {
   height: 100%;
   width: 95%;
@@ -5,6 +12,7 @@
 
 .slide {
   padding: 15px;
+  height: 450px;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
@@ -20,9 +28,10 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  color: #78B3D5;
 }
-.brand-icon h2 {
-  font-size: 1.3rem;
+.brand-icon h3 {
+  font-size: 1.5rem;
 }
 .brand-icon .icon {
   height: 20px;
@@ -31,26 +40,10 @@
 
 .product-price {
   font-size: 1.3rem;
-  color: #65A8CF;
+  color: #78B3D5;
 }
 
 .description {
-  font-size: 1rem;
-}
-
-button {
-  font-size: 1.1rem;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  background-color: #65A8CF;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-button:hover {
-  background-color: #89b8d3;
-}
-button .swiper-button-next {
-  color: #6926a7;
+  font-size: 1.2rem;
+  max-width: 75vmin;
 }/*# sourceMappingURL=slider.css.map */

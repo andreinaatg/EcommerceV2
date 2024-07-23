@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from "react-router-dom";
 import {Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
 import './home.css';
@@ -25,14 +26,14 @@ function Home () {
                 <div className="banner-info">
                 <p className="heading">peripera <br/>Miwa exclusive</p>
                 <p className="subtitle">Hurry up and grab limited free gift!</p>
-                <a href="shop.html"><button className="shop-btn">Shop Now</button></a>
+                <Link to='shop'><button className="shop-btn">Shop Now</button></Link>
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <img src="images/banner-2-big.jpeg" alt="Large banner" className="hideBanner"/>
                 <div className="banner-info">
                     <p className="heading">Anua <br/>Best selling products</p>
-                    <a href="shop.html"><button className="shop-btn">Shop Now</button></a>
+                    <Link to='shop'><button className="shop-btn">Shop Now</button></Link>
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -40,7 +41,7 @@ function Home () {
                 <div className="banner-info">
                     <p className="heading">Glow Up Daily <br/>Cheek Masks & Toner Pads</p>
                     <p className="subtitle">For your Skincare routine</p>
-                    <a href="shop.html"><button className="shop-btn">Shop Now</button></a>
+                    <Link to='shop'><button className="shop-btn">Shop Now</button></Link>
                 </div>
                 </SwiperSlide>
             </Swiper>

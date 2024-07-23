@@ -29,7 +29,6 @@ function BestSellers() {
                         <img src={product.img} alt={product.name} className="image" />
                         <div className="brand-icon">
                             <h3>{product.brand}</h3>
-                            <img src="images/bag-icon.png" alt="bag-icon" className="icon" />
                         </div>
                         <p className="description">{product.name}</p>
                         <p className="product-price">${product.price}</p>

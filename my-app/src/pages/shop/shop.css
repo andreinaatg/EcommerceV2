@@ -38,18 +38,16 @@ h1 {
 .product-container .product {
   margin-bottom: 10px;
   padding: 20px 10px;
-  box-shadow: 2px 5px 5px 3px rgba(101, 168, 207, 0.5);
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
-  background-color: aliceblue;
 }
 .product-container .product:hover {
   transform: translateY(-10px);
 }
 .product-container .image {
   max-width: 100%;
-  height: auto;
+  height: 300px;
 }
 .product-container .brand-icon {
   display: flex;
