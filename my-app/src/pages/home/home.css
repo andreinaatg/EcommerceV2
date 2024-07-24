@@ -41,7 +41,8 @@ p {
   background-color: rgba(101, 168, 207, 0.7333333333);
   color: white;
 }
-.banner-info .hideOnDesktop {
+
+.hideOnDesktop {
   display: none;
 }
 
@@ -59,9 +60,8 @@ p {
   margin-bottom: 60px;
 }
 .why-section .why-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .why-section .box {
   height: 100%;
@@ -80,4 +80,12 @@ p {
   margin: 0;
   width: 35vmin;
   text-align: center;
+}
+
+@media (max-width: 900px) {
+  .why-section .why-item {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 200px;
+  }
 }/*# sourceMappingURL=home.css.map */

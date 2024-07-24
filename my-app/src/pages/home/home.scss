@@ -55,11 +55,12 @@ p {
             color: white;
         }
     }
-      .hideOnDesktop {
-        display: none;
-      }
+
 }
 
+.hideOnDesktop{
+    display: none;
+}
 .why-section {
     background-color: #dceff3;
     width: 100vw;
@@ -73,9 +74,8 @@ p {
         margin-bottom: 60px;
     }
     .why-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
     }
     
     .box {
@@ -100,4 +100,10 @@ p {
 }
 
 
-
+@media (max-width:900px){
+    .why-section .why-item{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 200px;
+      }
+}

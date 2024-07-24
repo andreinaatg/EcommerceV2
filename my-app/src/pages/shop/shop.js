@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import './shop.css';
-
+import ProductDetail from "../../components/productDetail/productDetail";
 function Shop() {
   const [products, setProducts] = useState([]);
   const [filter, setFilter] = useState('');
-  const [selectedProduct, setSelectedProduct] = useState(null); // New state for selected product
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     fetchProducts();
@@ -18,7 +18,7 @@ function Shop() {
   }
 
   function handleProductClick(product) {
-    setSelectedProduct(product); // Set the selected product
+    setSelectedProduct(product);
   }
 
   function displayProducts(products) {
@@ -30,8 +30,7 @@ function Shop() {
           <button onClick={() => setFilter('cleanser')}>Cleanser</button>
           <button onClick={() => setFilter('cream')}>Creams</button>
           <button onClick={() => setFilter('toner')}>Toners</button>
-          <button onClick={() => setFilter('serum')}>serum</button>
-
+          <button onClick={() => setFilter('serum')}>Serum</button>
         </div>
         <div className="product-container">
           {products.map((product, i) => (
@@ -51,23 +50,13 @@ function Shop() {
     );
   }
 
-  function displayProductDetail(product) {
-    return (
-      <div className="product-detail">
-        <img src={product.img} alt={product.name} className="detail-image" />
-        <div className="details"> 
-        <h2>{product.name}</h2>
-        <p>Price: ${product.price}</p>
-        <p>Description: {product.description}</p>
-        <button onClick={() => setSelectedProduct(null)}>Back to Products</button>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <main>
-      {selectedProduct ? displayProductDetail(selectedProduct) : displayProducts(products)}
+      {selectedProduct ? (
+        <ProductDetail product={selectedProduct} onBack={() => setSelectedProduct(null)} />
+      ) : (
+        displayProducts(products)
+      )}
     </main>
   );
 }

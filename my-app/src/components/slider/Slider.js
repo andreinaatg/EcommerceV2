@@ -22,6 +22,29 @@ function BestSellers() {
                 keyboard={{ enabled: true }}
                 navigation={true}
                 modules={[Keyboard, Navigation]}
+                breakpoints={{
+           
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    },
+
+                    425: {
+                        slidesPerView: 2,
+                    },
+                     768: {
+                        slidesPerView: 3,
+                        spaceBetween: 15
+                    },
+                     900: {
+                        slidesPerView: 4,
+                        spaceBetween: 10
+                    },
+                    1024: {
+                        slidesPerView: 6,
+                    }
+                  }}
+                
                 className="bestSeller"
             >
                 {products.slice(0, 9).map((product, i) => ( // Slice the products array to get the first 8 items

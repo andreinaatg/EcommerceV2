@@ -1,0 +1,80 @@
+$form-error-color: red;
+$font: "Signika", sans-serif;
+$header: "Poetsen One", sans-serif;
+$text-color: #78B3D5;
+$blue: #65A8CF;
+$white: #ffffff;
+$darkerWhite: #f0f0f0;
+
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    justify-content: $content;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+  
+.form-container {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+    p{
+        font-size: 1rem;
+        font-weight: lighter
+    }
+    h2 {
+        color: $text-color
+    }
+}
+
+
+.form {
+    @include flexCenter(column,start ,stretch )
+}
+
+.form-row {
+   @include flexCenter(row,space-between,center );
+    .form-group {
+        flex: 1;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $blue;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        outline: none;
+    }
+}
+
+.error {
+    color: $form-error-color;
+    font-size:  0.875em;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: $blue;
+    color: $white;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #65a8cfa8;
+    }
+}

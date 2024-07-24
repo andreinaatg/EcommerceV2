@@ -11,37 +11,43 @@ function Home () {
         <main>
             <Swiper
                 slidesPerView={1}
-                spaceBetween={30}
                 pagination={{ clickable: true }}
+                spaceBetween={30}
+                loop={true}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
                   }}
                 navigation={true}
                 modules={[Pagination, Navigation,Autoplay]}
+                
                 className="mySwiper"
             >
                 <SwiperSlide>
                 <img src="images/banner-1-big.jpeg" alt="Large banner" className="hideBanner"/>
+                <img src="images/banner-1-small.jpeg" className="hideOnDesktop" alt="small banner"/>
+
                 <div className="banner-info">
                 <p className="heading">peripera <br/>Miwa exclusive</p>
                 <p className="subtitle">Hurry up and grab limited free gift!</p>
-                <Link to='shop'><button className="shop-btn">Shop Now</button></Link>
+                <Link to='/shop'><button className="shop-btn">Shop Now</button></Link>
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <img src="images/banner-2-big.jpeg" alt="Large banner" className="hideBanner"/>
+                <img src="images/banner-2-small.jpeg" className="hideOnDesktop" alt="small banner"/>
                 <div className="banner-info">
                     <p className="heading">Anua <br/>Best selling products</p>
-                    <Link to='shop'><button className="shop-btn">Shop Now</button></Link>
+                    <Link to='/shop'><button className="shop-btn">Shop Now</button></Link>
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <img src="images/banner-3-big.jpeg" alt="Large banner" className="hideBanner"/>
+                <img src="images/banner-3-small.jpeg" className="hideOnDesktop" alt="small banner"/>
                 <div className="banner-info">
                     <p className="heading">Glow Up Daily <br/>Cheek Masks & Toner Pads</p>
                     <p className="subtitle">For your Skincare routine</p>
-                    <Link to='shop'><button className="shop-btn">Shop Now</button></Link>
+                    <Link to='/shop'><button className="shop-btn">Shop Now</button></Link>
                 </div>
                 </SwiperSlide>
             </Swiper>

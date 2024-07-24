@@ -17,11 +17,12 @@
 .footer-col h4 {
   font-size: 1.4rem;
   color: #78B3D5;
-  margin-bottom: 30px;
   font-weight: 500;
+  margin: 0 0 20px 40px;
   position: relative;
   text-transform: capitalize;
 }
+
 
 .footer-col ul li {
   font-size: 1rem;
@@ -34,7 +35,7 @@
   text-transform: capitalize;
 }
 
-.footer-col ul li :hover {
+.footer-col ul li:hover {
   padding-left: 8px;
 }
 
@@ -58,12 +59,12 @@
   height: 50px;
 }
 
-.button-container {
+/* .button-container {
   display: flex;
   justify-content: center;
-}
+} */
 
-#continue-btn {
+/* #continue-btn {
   background-color: #65A8CF;
   color: white;
   border: none;
@@ -77,4 +78,4 @@
 #continue-btn:hover {
   background-color: rgba(101, 168, 207, 0.6078431373);
   transform: scale(1.2);
-}/*# sourceMappingURL=footer.css.map */
+} */
