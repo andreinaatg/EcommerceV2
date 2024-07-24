@@ -116,6 +116,10 @@
       width: 50%;
       margin-bottom: 30px;
   }
+  .product-detail {
+    flex-direction: column;
+    height: 130vh;
+  }
   
   }
   

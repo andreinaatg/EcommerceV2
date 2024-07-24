@@ -30,7 +30,7 @@ app.use('/products', express.static(path.join(__dirname, 'src', 'products')));
 
 // API endpoint to fetch all products
 app.get('/api/items', (req, res) => {
-  const query = 'SELECT Id, name, price, img, type, brand FROM products';
+  const query = 'SELECT * FROM products';
   connection.query(query, (err, results) => {
     if (err) {
       console.error('Error executing MySQL query:', err);

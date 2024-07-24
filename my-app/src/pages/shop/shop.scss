@@ -97,29 +97,3 @@ $darkerWhite: #f0f0f0;
     }    
 }
 
-.product-detail {
-    @include flexCenter(row,space-evenly,center);
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    .detail-image {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-      }
-      button {
-        font-size: 1.1rem;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 4px;
-        background-color: #65A8CF;
-        color: white;
-        cursor: pointer;
-        transition: all .3s ;
-        &:hover {
-            background-color: #89b8d3 ;
-    
-            
-        }
-    }  
-}

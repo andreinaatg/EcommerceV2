@@ -1,0 +1,86 @@
+.product-detail {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+  .details {
+    width: 75vmin;
+  }
+
+  .details h2 {
+    color: #78B3D5;
+    font-size: 2rem;
+  }
+  .details p {
+    font-size: 1.2rem;
+  }
+  .product-detail .detail-image {
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+
+  }
+  .product-detail button {
+    font-size: 1.1rem;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color: #65A8CF;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .product-detail button:hover {
+    background-color: #89b8d3;
+  }
+
+  .accordion {
+    width: 90%;
+    padding: 0;
+  }
+
+  .accordion p {
+    font-size: 1rem;
+    color: #78B3D5;
+  }
+  .accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 8px;
+  }
+  .accordion li label {
+    padding: 10px;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #78B3D5;
+    cursor: pointer;
+  }
+  .accordion li .content {
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+    max-height: 0;
+  }
+  .accordion li input[type=radio]:checked + label + .content {
+    max-height: 450px;
+    padding: 10px 10px 20px;
+  }
+  .accordion li input[type=radio]:checked + label::before {
+    content: "-";
+  }
+  .accordion li label::before {
+    content: "+";
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .accordion li input[type=radio] {
+    display: none;
+  }
