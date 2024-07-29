@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 import './shop.css';
 import ProductDetail from "../../components/productDetail/productDetail";
+
 function Shop() {
+  // State to store the list of products
   const [products, setProducts] = useState([]);
+  // State to store the current filter for products
   const [filter, setFilter] = useState('');
+  // State to store the selected product for detailed view
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+  // useEffect hook to fetch products when the component mounts or the filter changes
   useEffect(() => {
     fetchProducts();
   }, [filter]);
 
+  // Function to fetch products from the API based on the current filter
   function fetchProducts() {
     const endpoint = filter ? `/api/items/type/${filter}` : '/api/items';
     fetch(endpoint)
@@ -17,10 +23,12 @@ function Shop() {
       .then((data) => setProducts(data));
   }
 
+  // Function to handle clicking on a product
   function handleProductClick(product) {
     setSelectedProduct(product);
   }
 
+  // Function to display the list of products
   function displayProducts(products) {
     return (
       <>
@@ -53,8 +61,10 @@ function Shop() {
   return (
     <main>
       {selectedProduct ? (
+        // If a product is selected, display the product details
         <ProductDetail product={selectedProduct} onBack={() => setSelectedProduct(null)} />
       ) : (
+        // Otherwise, display the list of products
         displayProducts(products)
       )}
     </main>
