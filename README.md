@@ -7,7 +7,7 @@ EcommerceV2 is a full stack e-commerce application designed to provide a seamles
 ## Project Structure
 
 The project has the following structure:
-
+```
 - `my-app/`
   - `backend/` - Contains the backend server code and build folder.
     - `build/` - Contains built static files for production deployment.
@@ -16,7 +16,7 @@ The project has the following structure:
     - `src/` - Source code for the React application.
     - `public/` - Public assets and static files.
     - `package.json` - Configuration file for frontend dependencies and scripts.
-
+```
 ## Getting Started
 
 ### Prerequisites
@@ -29,7 +29,7 @@ The project has the following structure:
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/andreinaatg/EcommerceV2.git
    cd EcommerceV2/my-app
 
 2. **Install Backend Dependencies**
@@ -38,7 +38,6 @@ Navigate to the backend directory and install the required packages:
 
 - cd backend
 - npm install
-- Ensure you have configured your database connection. Update any relevant environment variables or configuration files as needed.
 
 3. **Build the Backend**
 
@@ -48,8 +47,7 @@ Navigate to the backend directory and install the required packages:
 Run the server with:
 
 - node server.js
-The backend server will run on http://localhost:5050 or another port specified in server.js.
-
+The backend server will run on http://localhost:5050 
 
 5. **Install Frontend Dependencies**
 
