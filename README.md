@@ -1,8 +1,10 @@
 # EcommerceV2
 
-**https://miwav2.onrender.com**
-
+## Summary
 EcommerceV2 is a full stack e-commerce application designed to provide a seamless online shopping experience. It is built using React for the frontend and Node.js for the backend, connected to a MySQL database.
+
+### Deployed using Render 
+**https://miwav2.onrender.com**
 
 ## Project Structure
 

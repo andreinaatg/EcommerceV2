@@ -25,7 +25,7 @@ connection.connect((err) => {
 // Serve static files from the 'build' directory
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Serve images from the 'src/images' directory under '/images' route
+// Serve images from the 'src/products' directory under '/products' route
 app.use('/products', express.static(path.join(__dirname, 'src', 'products')));
 
 // API endpoint to fetch all products
